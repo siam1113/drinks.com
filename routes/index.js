@@ -2,9 +2,12 @@ var express = require("express");
 var router = express.Router();
 var dbConnection = require("../dbconnection");
 
-/* GET home page. */
 router.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+  res.render("index");
+});
+
+router.get("/cart", function (req, res, next) {
+  res.render("cart");
 });
 
 module.exports = router;

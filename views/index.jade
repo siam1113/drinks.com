@@ -1,37 +1,31 @@
 extends layout
 
+block cartCount
+      a.btn.btn-primary(type='button',href='/cart')
+        | Drinks Added
+        span.badge.text-bg-light.m-1#cart 0
 block content
   div.container.d-flex.flex-wrap.justify-content-center
     div.card.m-3(style='width: 15rem;')
         img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
         div.card-body
           h5.card-title.p-2.text-center Pepsi
-          a.btn.btn-primary.w-100(href='#') Buy Now
+          a.btn.btn-primary.w-100.add(href='/add') Buy Now
+    div.card.m-3(style='width: 15rem;')
+      img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
+      div.card-body
+        h5.card-title.p-2.text-center Coke
+        button.btn.btn-primary.w-100.add Buy Now
     div.card.m-3(style='width: 15rem;')
       img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
       div.card-body
         h5.card-title.p-2.text-center Pepsi
-        a.btn.btn-primary.w-100(href='#') Buy Now
+        button.btn.btn-primary.w-100.add Buy Now
     div.card.m-3(style='width: 15rem;')
       img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
       div.card-body
         h5.card-title.p-2.text-center Pepsi
-        a.btn.btn-primary.w-100(href='#') Buy Now
-    div.card.m-3(style='width: 15rem;')
-      img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
-      div.card-body
-        h5.card-title.p-2.text-center Pepsi
-        a.btn.btn-primary.w-100(href='#') Buy Now
-    div.card.m-3(style='width: 15rem;')
-      img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
-      div.card-body
-        h5.card-title.p-2.text-center Pepsi
-        a.btn.btn-primary.w-100(href='#') Buy Now
-    div.card.m-3(style='width: 15rem;')
-      img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
-      div.card-body
-        h5.card-title.p-2.text-center Pepsi
-        a.btn.btn-primary.w-100(href='#') Buy Now
+        button.btn.btn-primary.w-100.add Buy Now
   
 
     

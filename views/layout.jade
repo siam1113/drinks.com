@@ -6,9 +6,10 @@ html
 
   body.pt-0(style="background: url('https://images6.alphacoders.com/369/369172.jpg');background-size:cover")
 
-    nav.navbar.container-fluid.d-block.m-auto
-      a.navbar-brand.text-center(href='/')
-        img.d-block.m-auto(src='https://png.pngtree.com/png-clipart/20200727/original/pngtree-bottle-logo-design-vector-png-image_5286639.jpg' alt='Logo' width='50' height='44')
+    nav.navbar.container-fluid.d-flex.justify-content-around
+      a.navbar-brand(href='/')
+        img.d-block(src='https://png.pngtree.com/png-clipart/20200727/original/pngtree-bottle-logo-design-vector-png-image_5286639.jpg' alt='Logo' width='50' height='44')
         p.fs-4.fw-bold Drinks.com
-              
+        block cartCount
     block content
+    script(src="javascripts/index.js") 
