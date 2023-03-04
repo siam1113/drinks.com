@@ -1,5 +1,24 @@
 extends layout
 
 block cartCount
-      a.btn.btn-primary(type='button',href='/user')
+    div.container.d-flex.justify-content-between
+      a.btn.btn-primary(type='button',href='/')
+        | <- Back
+      a.btn.btn-primary(type='button',href='/payment')
         | Proceed ->
+block content 
+    div.container.d-grid.px-5.my-5.bg-primary.rounded-2
+        div.w-100.d-flex.justify-content-between
+          h4.w-50 Name 
+          h4.w-25.text-center Count 
+          h4.w-25.text-end Price
+        each drinksInfo,drinksName in addedDrinks
+          div.w-100.d-flex.justify-content-between
+            h6.w-50= drinksName
+            h6.w-25.text-center #{drinksInfo['count']} piece
+            h6.w-25.text-end  #{drinksInfo['price']}$
+        div.w-100.d-flex.justify-content-between.border-top.my-3.py-1
+          h5.w-50 Total 
+          h6.w-50.text-end #{totalPrice}$
+
+      

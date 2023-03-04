@@ -1,33 +1,42 @@
 extends layout
 
 block cartCount
-      a.btn.btn-primary(type='button',href='/cart')
+  div.container.d-flex.flex-row-reverse#cart
+    a.btn.btn-primary(type='button',href='/cart')
         | Drinks Added
-        span.badge.text-bg-light.m-1#cart 0
+        span.badge.text-bg-light.m-1#cart-count 0
+    button.btn.btn-danger.mx-3#clear Clear Drinks
 block content
-  div.container.d-flex.flex-wrap.justify-content-center
+  div.container.d-flex.flex-wrap.justify-content-between.p-0
     div.card.m-3(style='width: 15rem;')
         img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
         div.card-body
-          h5.card-title.p-2.text-center Pepsi
-          a.btn.btn-primary.w-100.add(href='/add') Buy Now
+          h5.card-title.p-2.d-flex.justify-content-between
+            span Pepsi 
+            span 10$
+          a.btn.btn-primary.w-100.add Buy Now
     div.card.m-3(style='width: 15rem;')
       img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
       div.card-body
-        h5.card-title.p-2.text-center Coke
+        h5.card-title.p-2.d-flex.justify-content-between
+            span Coke 
+            span 12$
         button.btn.btn-primary.w-100.add Buy Now
     div.card.m-3(style='width: 15rem;')
       img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
       div.card-body
-        h5.card-title.p-2.text-center Pepsi
+        h5.card-title.p-2.d-flex.justify-content-between
+            span Dew 
+            span 11$
         button.btn.btn-primary.w-100.add Buy Now
     div.card.m-3(style='width: 15rem;')
       img.w-100(src='https://cdn.pixabay.com/photo/2020/09/18/23/17/pepsi-5583105_960_720.jpg' alt='Pepsi')
       div.card-body
-        h5.card-title.p-2.text-center Pepsi
+        h5.card-title.p-2.d-flex.justify-content-between
+            span Speed 
+            span 19$
         button.btn.btn-primary.w-100.add Buy Now
-  
 
-    
-  
+block jsScript 
+  script(src="javascripts/index.js") 
 

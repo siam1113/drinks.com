@@ -1,0 +1,19 @@
+extends layout
+block cartCount
+    div.container.d-flex.justify-content-between
+      a.btn.btn-primary(type='button',href='/cart')
+        | <- Back
+block content
+  form.bg-primary.p-3.my-3(method="POST", action="/checkout")
+    .mb-3
+      label.form-label(for='fullName') Full Name
+      input#full-name.form-control(type='text', name='fullName')
+    .mb-3
+      label.form-label(for='phone') Phone Number
+      input#phone.form-control(type='number', name='phone')
+      if message
+        .alert.alert-danger.my-3(role='alert')
+          |  #{message}
+      else 
+        ''
+    button.btn.btn-info(type='submit') Checkout
